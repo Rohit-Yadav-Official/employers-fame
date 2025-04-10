@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './jobBoardDashboard.css';
 import jobsvg from "../../assets/jobBoardDashboard.svg"
-
+import JobForm from "../jobForm/jobform";
 import { FaBars } from "react-icons/fa";
 import { FiPhoneCall } from "react-icons/fi";
 import { BsPeople, BsGraphUp } from "react-icons/bs";
@@ -15,6 +15,40 @@ export default function JobsDashboard() {
   const [showTitle, setShowTitle] = useState(false);
   const [showLocation, setShowLocation] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+
+
+  const [showForm, setShowForm] = useState(false);
+
+  const [formData, setFormData] = useState({
+    title: "",
+    company: "",
+    location: "",
+    salary: "",
+    description: "",
+    responsibilities: "",
+    qualifications: "",
+    skills: "",
+    languages: "",
+    address: "",
+    officeTiming: "",
+    contact: "",
+    website: "",
+    careerPage: ""
+  });
+
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    console.log("Submitted Data:", formData);
+    alert("Job posted successfully!");
+    setShowForm(false);
+    // Add backend call or form reset logic here
+  };
 
   return (
     <div className="JobDashBoard">
@@ -43,7 +77,7 @@ export default function JobsDashboard() {
       <div className={`dashboard ${isOpen ? "shifted" : ""}`}>
         <header className="dashboard-header">
           <h1 className="title">Jobs</h1>
-          <button className="post-job-btn">Post a job</button>
+          <button className="post-job-btn" onClick={() => setShowForm(true)}>Post a job</button>
         </header>
 
         <div className="filters">
@@ -122,6 +156,9 @@ export default function JobsDashboard() {
           <button className="post-job-btn large">Post a job</button>
         </div>
       </div>
+      {showForm && (
+        <JobForm/>
+        )}
     </div>
   );
 }
