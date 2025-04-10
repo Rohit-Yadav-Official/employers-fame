@@ -1,0 +1,106 @@
+.dashboard {
+    font-family: Arial, sans-serif;
+    padding: 24px;
+    background: #fff;
+    min-height: 100vh;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .post-job-btn {
+    background-color: #2557a7;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .post-job-btn.large {
+    margin-top: 16px;
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 36px;
+  }
+  
+  .new-tag {
+    background-color: #e5f0ff;
+    color: #2557a7;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-weight: bold;
+  }
+  
+  .filter-btn {
+    background: #f3f3f3;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .filter-btn.outlined {
+    font-weight: bold;
+    background: white;
+  }
+  
+  .filter-btn.filter-applied {
+    background: #e6f0ff;
+    color: #2557a7;
+    font-weight: bold;
+  }
+  
+  .slider-icon {
+    margin-right: 6px;
+  }
+  
+  .result-text {
+    font-size: 14px;
+    color: #666;
+    margin-left: auto;
+  }
+  
+  .illustration-section {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .illustration {
+    width: 300px;
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+  
+  .promo-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  
+  .promo-subtext {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
